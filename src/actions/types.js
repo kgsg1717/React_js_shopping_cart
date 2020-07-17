@@ -1,0 +1,9 @@
+export const ADD_PRPDUCT_BASKET = 'ADD_PRPDUCT_BASKET';
+export const GET_NUMBERS_BASKET = 'GET_NUMBERS_BASKET';
+export const INCREASE_QUANTITY = 'INCREASE_QUANTITY';
+export const DECREASE_QUANTITY = 'DECREASE_QUANTITY';
+export const CLEAR_PRODUCT = 'CLEAR_PRODUCT';
+export const LOADING  = 'LOADING ';
+export const SUCCESS  = 'SUCCESS ';
+export const FAILURE  = 'FAILURE ';
+

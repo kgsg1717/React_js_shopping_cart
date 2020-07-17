@@ -1,38 +1,240 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header{
+
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  position: relative;
+
+}
+
+.fondo_oscuro{
+
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: rgba(10, 10, 10, 0.3);
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 60px 0 60px;
+}
+
+nav ul{
+  margin: 0 auto;
+}
+
+nav li {
+
+  list-style: none;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+
+nav li a {
+  padding:  5px;
+  background-color:  #ffffff;
+  text-decoration: none;
+}
+
+.cart_button ion-icon{
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.container_product, .container-products_carts{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.container_product .img_product{
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container_product .img_product .add_to_cart{
+
+  position: absolute;
+  width: 100%;
+  background-color: darkgray;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.container_product .img_product:hover .cart_01,
+.container_product .img_product:hover .cart_02,
+.container_product .img_product:hover .cart_03,
+.container_product .img_product:hover .cart_04 {
+  bottom: 50px;
+  opacity: 1;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/*cart*/
+
+.container-products_carts{
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+
+}
+
+.container-products_carts ion-icon{
+
+  font-size: 25px;
+  color: blue;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+
+}
+
+.product-header{
+
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgray;
+  margin: 0 auto;
+
+}
+
+.product.title{
+  width: 45%;
+}
+
+.price{
+  width: 15%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+
+}
+
+.quantity{
+  width: 30%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  width: 10%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.product {
+
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+
+}
+
+.product ion-icon{
+  cursor: pointer;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products img {
+  width: 75px;
+}
+
+.basketTotalContainer{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.basketTotalTitle{
+  width: 30%;
+}
+
+.basketTotal {
+  width: 10%;
+}
+.edit_product{
+  position: absolute;
+  width: 100%;
+  background-color: #ff2a42;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container_product .img_product:hover .edit_product{
+  top: 0px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
 }
+@media(max-widht: 500px){
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  nav h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .sm-hide{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .products,
+  .product-header{
+    justify-content: center;
   }
+
+  .basketTotalContainer{
+    padding-right: 8%;
+  }
+
 }
