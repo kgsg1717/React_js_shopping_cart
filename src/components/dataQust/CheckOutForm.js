@@ -125,8 +125,12 @@ class CheckOutForm  extends Component {
 
 
               </Table>
+              
+                   
+                 
           </Modal.Body>
           <Modal.Footer>
+          <Button onClick={this.handleSubmit} variant="primary" type="submit"> Check Out</Button>
             <Button variant="danger" onClick={this.props.onHide}>Cerrar</Button>
           </Modal.Footer>
         </Modal>
